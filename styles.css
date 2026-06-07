@@ -1,0 +1,674 @@
+:root {
+    --primary-dark: #14532d; /* Экологичный глубокий темно-зеленый (вместо серого) */
+    --primary-color: #166534; /* Вспомогательный лесной зеленый тон */
+    --primary-light: #f0fdf4; /* Светло-зеленый приятный фон для счетчиков */
+    --accent-gold: #16a34a; /* Основной эко-зеленый цвет для кнопок и акцентов */
+    --accent-gold-hover: #15803d; /* Темно-зеленый при наведении */
+    --bg-light: #f4f7f4; /* ОСНОВНОЙ ФОН: Эко бежево-зеленоватый чистый цвет */
+    --bg-white: #ffffff; /* Белый цвет контейнеров */
+    --text-main: #1e293b; /* Насыщенный темный для лучшей читаемости */
+    --text-muted: #64748b;
+    --text-light: #fafafa;
+    --danger: #eab308; /* Солнечный теплый желтый/золотой для цен и скидок (вместо красного) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e2e8e2; /* Мягкий природный серо-зеленый оттенок */
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Mobile-first main wrapper simulating 9:16 aspect ratio constraints on desktop */
+.main_wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: var(--bg-light);
+    box-shadow: 0 0 30px rgba(20, 83, 45, 0.15); /* Тень с легким зеленым отливом */
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Typography */
+h1, h2, h3, .main_title, .section_title, .block_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Top Line */
+.top_line {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.top_line_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top_item p {
+    margin: 0;
+}
+
+.top_item b {
+    color: var(--danger); /* Изменено на солнечный желтый для контраста на темном фоне */
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    position: relative;
+}
+
+.offer_section {
+    text-align: center;
+}
+
+/* Hero Section */
+.hero_bg {
+    background: linear-gradient(135deg, var(--bg-light) 0%, #e2ede2 100%);
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(22, 163, 74, 0.1); /* Полупрозрачный зеленый фон плашки */
+    color: var(--primary-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.main_title {
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+/* Hero Image */
+.hero_image_wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.hero_img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(20, 83, 45, 0.15);
+    object-fit: cover;
+    aspect-ratio: 9/10;
+}
+
+.sale_badge {
+    position: absolute;
+    top: -10px;
+    right: 15%;
+    background-color: var(--danger); /* Яркий желтый круг */
+    color: #14532d; /* Темно-зеленый текст для идеальной читаемости на желтом */
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(234, 179, 8, 0.4);
+    transform: rotate(10deg);
+}
+
+/* Timer */
+.timer_wrap {
+    background-color: var(--bg-white);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.timer_title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.timer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.count {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text {
+    font-size: 11px;
+    margin-top: 5px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.separator {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: -20px;
+}
+
+/* Stock */
+.prod_count {
+    font-size: 15px;
+    color: #b45309; /* Благородный янтарно-оранжевый акцент вместо агрессивного красного */
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Pricing Cards */
+.prices_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.price_card {
+    background: var(--bg-white);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 15px;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.price_card.highlight {
+    border: 2px solid var(--accent-gold); /* Зеленая рамка для фокуса */
+    background: linear-gradient(180deg, #FFFFFF 0%, #f0fdf4 100%);
+    transform: scale(1.02);
+}
+
+.price_card.shadow_green {
+    box-shadow: 0 10px 30px rgba(22, 163, 74, 0.15);
+}
+
+.hit_badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-gold); /* Зеленый хит продаж */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price_title {
+    color: var(--text-main);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-top: 5px;
+}
+
+.price_flex {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.old_price {
+    font-size: 24px;
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.old_price span {
+    font-size: 20px;
+}
+
+.new_price {
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--primary-dark); /* Спокойная глубокая зеленая цена */
+}
+
+.new_price span {
+    font-size: 28px;
+}
+
+.price_card.highlight .new_price {
+    font-size: 40px;
+    font-weight: 900;
+    color: #16a34a; /* Яркий акцент стоимости на выбранной карточке */
+}
+
+/* Buttons */
+.button-primary {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-gold) 0%, #15803d 100%); /* Сочный эко-градиент */
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 18px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(22, 163, 74, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-primary:hover, .button-primary:active {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px rgba(22, 163, 74, 0.4);
+    background: linear-gradient(135deg, var(--accent-gold-hover) 0%, var(--accent-gold) 100%);
+}
+
+.center_btn {
+    margin-top: 35px;
+}
+
+/* Visual Cards Section */
+.visual_section {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.visual_card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    overflow: hidden;
+}
+
+.bg_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bg_img_one {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 80%);
+    color: var(--text-light);
+}
+
+.card_overlay.right_align {
+    background: linear-gradient(to left, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    align-items: flex-end;
+    text-align: right;
+}
+
+.card_overlay.dark_overlay {
+    background: rgba(0,0,0,0.4);
+}
+
+.card_overlay.left_align {
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 90%);
+    align-items: flex-start;
+    text-align: left;
+}
+
+.card_overlay.bottom_align {
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 70%);
+}
+
+.card_title {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    max-width: 85%;
+}
+
+.text_gold {
+    color: var(--danger); /* Желтый/солнечный цвет для заголовков поверх фото плашек */
+}
+
+.card_text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    max-width: 80%;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.card_text.small_text {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.card_text.bold_text {
+    font-weight: 600;
+}
+
+.card_divider {
+    width: 50px;
+    height: 2px;
+    background-color: var(--danger); /* Желтый разделитель */
+    margin: 15px 0;
+}
+
+.card_overlay.right_align .card_divider {
+    margin-left: auto;
+}
+
+.card_badge {
+    margin-bottom: 10px;
+    background-color: var(--accent-gold);
+    color: white;
+    text-shadow: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card_list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    max-width: 85%;
+}
+
+.card_list li {
+    font-size: 15px;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.card_overlay.right_align .card_list li {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.card_list li::before {
+    content: "•";
+    color: var(--danger); /* Солнечные маркеры */
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.card_overlay.right_align .card_list li::before {
+    left: auto;
+    right: 0;
+}
+
+.card_list.numbered {
+    counter-reset: card-counter;
+}
+
+.card_list.numbered li {
+    padding-left: 25px;
+}
+
+.card_list.numbered li::before {
+    counter-increment: card-counter;
+    content: counter(card-counter) ".";
+    color: var(--danger);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* Text Breaks Between Visual Cards */
+.text_break {
+    background-color: var(--bg-white);
+    padding: 35px 25px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    position: relative;
+    z-index: 2;
+}
+
+.text_break p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-main);
+    margin-bottom: 0;
+}
+
+.text_break p b {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.text_break_title {
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.text_break_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text_break_list li {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--text-main);
+}
+
+.text_break_list li::before {
+    content: "✓";
+    font-size: 14px;
+    margin-top: 2px;
+    color: var(--accent-gold); /* Зеленые галочки преимуществ */
+    font-weight: bold;
+}
+
+/* Form Section */
+.dark_bg {
+    background-color: var(--primary-dark); /* Глубокий темно-зеленый блок формы */
+    color: var(--bg-white);
+}
+
+.dark_bg .main_title {
+    color: var(--bg-white);
+}
+
+.dark_bg .timer_title {
+    color: var(--bg-white);
+}
+
+.dark_bg .timer_wrap {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.dark_bg .count {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--bg-white);
+}
+
+.dark_bg .separator {
+    color: var(--danger);
+}
+
+.dark_bg .text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form_container {
+    background: var(--bg-white);
+    border-radius: 16px;
+    padding: 30px 20px;
+    margin-top: 40px;
+    color: var(--text-main);
+}
+
+.form_title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: var(--primary-dark);
+}
+
+.form_subtitle {
+    font-size: 13px;
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.input_group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input_group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.input_group input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    background-color: #FAFAFA;
+}
+
+.input_group input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    background-color: var(--bg-white);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15); /* Зеленое свечение при фокусе инпута */
+}
+
+.submit_btn {
+    margin-top: 10px;
+}
+
+.security_text {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 15px;
+}
+
+/* FAQ / Дополнительные блоки */
+.faq_section {
+    background-color: var(--bg-white);
+}
+
+/* Footer */
+.footer_section {
+    background-color: #0b2416; /* Очень глубокий хвойный цвет для подвала */
+    color: rgba(255,255,255,0.6);
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.footer_content p {
+    margin-bottom: 8px;
+}
+
+.company_name {
+    font-size: 16px;
+    color: var(--bg-white);
+    font-weight: 600;
+    margin-bottom: 15px !important;
+}
+
+.policy_link {
+    color: var(--danger); /* Золотистая ссылка политики конфиденциальности */
+    text-decoration: underline;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Animation utilities */
+html {
+    scroll-behavior: smooth;
+}
