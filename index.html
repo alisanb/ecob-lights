@@ -1,341 +1,426 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <link rel="stylesheet" href="assets/css/style.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ОТБЕЛИВАЮЩАЯ РУЧКА ДЛЯ ЗУБОВ</title>
-	<link rel="icon" type="image/x-icon" href="/assets/images/like.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Премиальные Садовые Солнечные Фонари | Элегантное Уличное Освещение</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- Include EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --success-green: #10b981;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
 
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('Ffh6s4a6_5ED8X0uS'); // Replace 'Ffh6s4a6_5ED8X0uS' with your EmailJS User ID
-        })();
-    </script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1008821741235842');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1008821741235842&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+        .delivery-notice-container {
+            width: 100%;
+            max-width: 550px;
+            margin: 15px auto;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .delivery-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f0fdf4; /* Light green background */
+            border: 1px solid #bbf7d0;
+            padding: 16px 20px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .delivery-icon-box {
+            background: var(--success-green);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
+        }
+
+        .truck-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .delivery-text-box {
+            flex: 1;
+            padding-right: 45px; /* Leave space for the badge */
+        }
+
+        .delivery-title {
+            margin: 0 0 4px 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .delivery-desc {
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .delivery-badge {
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            background: #ef4444; /* Eye-catching red badge */
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Small screens responsive tweaks */
+        @media (max-width: 480px) {
+            .delivery-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 15px;
+            }
+            .delivery-text-box {
+                padding-right: 0;
+            }
+            .delivery-badge {
+                top: auto;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
 </head>
-    <body>
-		<script>
-  fbq('track', 'Purchase', {
-    value: 10,
-    currency: 'AZN',
-  });
-</script>
-        <div class="main_wrapper">
-            <!-- header 2 -->
-            <header class="offer_section offer2">
-                <div class="title_block">
-                    <h1 class="main_title" style="
-                    text-transform: uppercase;
-                    font-size: 20px;
-                    letter-spacing: 0px;    
-                    line-height: 30px;
-                        ">ОТБЕЛИВАЮЩАЯ РУЧКА ДЛЯ ЗУБОВ</h1>
-                    <p class="subtitle">НАДЁЖНОЕ РЕШЕНИЕ ДЛЯ ЯРКОЙ УЛЫБКИ И БЕЗБОЛЕЗНЕННОГО ОТБЕЛИВАНИЯ!</p>
+
+<body>
+    <div class="main_wrapper">
+        <section class="top_line">
+            <div class="top_line_content">
+                <div class="top_item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="8" width="18" height="12" rx="2" ry="2"></rect>
+                        <line x1="16" y1="8" x2="16" y2="4"></line>
+                        <line x1="8" y1="8" x2="8" y2="4"></line>
+                    </svg>
+                    <p><b>Доставка</b> через день</p>
                 </div>
-                <img class="offer_image" src="assets/images/imag1.jpg">
-                <div class="price_block clearfix" style="background: url(/assets/images/offer.png) center no-repeat;">
-                    <div class="price_item old">
-                        <div class="text">Обычная цена:</div>
-                        <div class="value">20 AZN</div>
-                    </div>
-                    <div class="discount_block">
-                        <div class="text">скидка</div>
-                        <div class="value">-50%</div>
-                    </div>
-                    <div class="price_item new">
-                        <div class="text">Цена сегодня:</div>
-                        <div class="value">10 AZN</div>
-                    </div>
+                <div class="top_item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <p><b>Оплата при</b> получении</p>
                 </div>
-                <p style="
-                text-align: center;
-                background: #088395;
-                color: white;
-                padding: 10px;
-                font-size: 17px;
-                margin-bottom: 10px;
-                text-transform: uppercase;
-                font-weight: bold;
-                ">ОТБЕЛИВАЮЩАЯ РУЧКА ДЛЯ ЗУБОВ</p>
-                <div id="timer1" class="timer_block clearfix">
-                    <p>До конца акции осталось:</p>
-                    <div class="timer clearfix">
-                        <div class="timer_item">
-                            <div class="count hours"><span>0</span><span>0</span></div>
-                            <div class="text">часов</div>
+            </div>
+        </section>
+
+        <section class="offer_section hero_bg">
+            <div class="overlay"></div>
+            <div class="content_layer">
+                <div class="badge">Экологичная Эффективность</div>
+                <h1 class="main_title">Садовые Солнечные Фонари</h1>
+                <p class="subtitle">Освещайте свои вечера без лишних усилий. Преобразите ваш сад, дорожки и подъездной путь с помощью премиальных грунтовых светильников. Ноль проводов. Ноль счетов за электричество.</p>
+
+                <div class="hero_image_wrapper">
+                    <img src="images/01.jpg" alt="Садовые солнечные фонари Комплект" class="hero_img">
+                    <div class="sale_badge">-35%</div>
+                </div>
+
+                <div class="timer_wrap">
+                    <p class="timer_title">Акция закончится через:</p>
+                    <div class="timer_container">
+                        <div class="timer_block">
+                            <div class="count hours">03</div>
+                            <div class="text">Часов</div>
                         </div>
-                        <div class="timer_item">
-                            <div class="count minutes"><span>0</span><span>0</span></div>
-                            <div class="text">минут</div>
+                        <div class="separator">:</div>
+                        <div class="timer_block">
+                            <div class="count minutes">09</div>
+                            <div class="text">Минут</div>
                         </div>
-                        <div class="timer_item">
-                            <div class="count seconds"><span>0</span><span>0</span></div>
-                            <div class="text">секунд</div>
+                        <div class="separator">:</div>
+                        <div class="timer_block">
+                            <div class="count seconds">29</div>
+                            <div class="text">Секунд</div>
                         </div>
                     </div>
                 </div>
 
-                <a href="#order_form" class="button">Купить сейчас</a>
-                <div class="products_count">* осталось <b>11</b> штук по акции</div>
-            </header>
-           
-            <section class="description_section">
-                <h2 class="title">ОТБЕЛИВАЮЩАЯ РУЧКА ДЛЯ ЗУБОВ      </h2>
-    <img src="assets/images/ima2.jpg" alt="EMS Massager">
-<p>
-    <span style="font-weight: 700">Быстрое и Эффективное Отбеливание</span><br>
-    Отбеливающая ручка мгновенно удаляет пятна от кофе, чая, вина, лимонада и курения. Уже после первых применений вы заметите, как ваша улыбка становится ярче и свежее.
-</p>
-    <img src="assets/images/ima3.jpg" alt="EMS Massager">
+                <div class="prod_count">Осталось всего <b>8 шт.</b> по акции!</div>
 
-<p>
-    <span style="font-weight: 700">Безопасно и Без Чувствительности</span><br>
-    Формула не вызывает раздражения, не повреждает эмаль и не вызывает чувствительности. Идеальный выбор для безопасного домашнего отбеливания без боли и дискомфорта.
-</p>
-    <img src="assets/images/ima4.jpg" alt="EMS Massager">
-<p>
-    <span style="font-weight: 700">Простое Применение за 1 Минуту в День</span><br>
-    Сухими зубами нанесите гель, просто повернув основание ручки. Используйте 2 раза в день на протяжении 2 недель — и ваша улыбка станет на 4 тона белее!
-</p>
-    <img src="assets/images/ima5.avif" alt="EMS Massager">
-<p>
-    <span style="font-weight: 700">Премиальное Качество и Надёжность</span><br>
-    Изготовлены из безопасных, протестированных компонентов. Активный кислород мгновенно начинает работу, устраняя налёт и загрязнения даже в труднодоступных местах.
-</p>
-    <img src="assets/images/ima6.jpg" alt="EMS Massager">
+                <div class="prices_container">
+                    <div class="price_card" data-package="1 Комплект (4 шт.) - Базовый">
+                        <div class="price_title">1 Комплект (4 шт.) - Базовый</div>
+                        <div class="price_flex">
+                            <div class="old_price">30 <span>AZN</span></div>
+                            <div class="new_price">19 <span>AZN</span></div>
+                        </div>
+                    </div>
 
-<p>
-    <span style="font-weight: 700">Инновационный Дизайн</span><br>
-    Удобный поворотный механизм с мягкой кисточкой обеспечивает точное нанесение геля на каждый зуб и его промежутки. Прозрачный корпус показывает оставшееся количество средства.
-</p>
-    <img src="assets/images/ima7.jpg" alt="EMS Massager">
-<p>
-    <span style="font-weight: 700">Компактность и Удобство в Пути</span><br>
-    Комплект из 5 ручек удобно брать с собой — будь то работа, путешествие или важное мероприятие. Больше не нужно ждать: отбеливание доступно в любом месте и в любое время!
-</p>
-     
+                    <div class="price_card highlight shadow_green" data-package="2 Комплекта (8 шт.) - Выгодный">
+                        <div class="hit_badge">Хит продаж</div>
+                        <div class="price_title">2 Комплекта (8 шт.) - Выгодный</div>
+                        <div class="price_flex">
+                            <div class="old_price">50 <span>AZN</span></div>
+                            <div class="new_price">29 <span>AZN</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="delivery-notice-container">
+                    <div class="delivery-card">
+                        <div class="delivery-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="truck-icon">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        
+                        <div class="delivery-text-box">
+                            <h3 class="delivery-title">Бесплатная доставка 0 AZN</h3>
+                            <p class="delivery-desc">Доставим ваш заказ прямо до двери совершенно бесплатно!</p>
+                        </div>
+
+                        <span class="delivery-badge">Акция</span>
+                    </div>
+                </div>
+
+                <a href="#order_form" class="button-primary">Заказать со скидкой</a>
+            </div>
+        </section>
+
+        <section class="visual_section">
+
+            <div class="visual_card" style="height:640px ;">
+                <img src="images/02.jpg" alt="Премиальный ландшафтный дизайн" class="bg_img_one">
+            </div>
+
+            <div class="text_break">
+                <p>Наши <b>премиальные солнечные фонари</b> специально разработаны для создания элегантного беспроводного освещения вашего двора. Благодаря скрытому монтажу непосредственно в почву, газон или гравий, эти низкопрофильные светильники идеально вписываются в ландшафт, абсолютно не мешая работе газонокосилки и сохраняя первозданную красоту вашего участка.</p>
+            </div>
+
+            <div class="visual_card" style="height: 640px;">
+                <img src="images/03.jpg" class="bg_img_one" alt="Умное автоматическое включение">
+                <div class="card_overlay left_align" style="display: none;">
+                    <h3 class="card_title">Умная автоматика «От заката до рассвета»</h3>
+                    <p class="card_text">Комфортное освещение, которое безопасно укажет вам путь.</p>
+                    <div class="card_divider"></div>
+                    <p class="card_text small_text">Оснащенные высокочувствительным встроенным датчиком света, эти садовые фонари автоматически активируются с наступлением темноты и самостоятельно выключаются на рассвете. Наслаждайтесь уютным вечерним светом каждую ночь без лишних забот.</p>
+                </div>
+            </div>
+
+            <div class="text_break">
+                <p>Благодаря усовершенствованной, высокоэффективной солнечной панели в сочетании с емким перезаряжаемым аккумулятором, дисковые светильники быстро накапливают энергию в световой день и обеспечивают до <b>10 часов непрерывного ночного свечения</b>.</p>
+            </div>
+
+            <div class="visual_card" style="height: 640px;">
+                <img src="images/04.jpg" alt="Универсальное применение светильников" class="bg_img_one">
+                <div class="card_overlay right_align dark_overlay" style="display: none;">
+                    <div class="badge card_badge">УНИВЕРСАЛЬНЫЙ ДИЗАЙН</div>
+                    <h3 class="card_title text_gold">ИДЕАЛЬНО ДЛЯ ЛЮБОГО ПРОСТРАНСТВА</h3>
+                    <p class="card_text bold_text">Повысьте безопасность и эстетику вашего участка:</p>
+                    <ul class="card_list">
+                        <li>Освещение темных садовых дорожек и тротуаров</li>
+                        <li>Декоративная подсветка красивых клумб и кустарников</li>
+                        <li>Обозначение подъездных путей для безопасной парковки ночью</li>
+                        <li>Создание уютной и теплой атмосферы на патио или террасе</li>
+                        <li>Дополнительная видимость вокруг лестниц, настилов и заборов</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text_break">
+                <p>Отличный выбор для современных домовладельцев, которые ценят простоту и надежность. Забудьте о сложной прокладке кабелей, запутанных уличных электрических проводах и постоянно растущих счетах за электроэнергию — эти автономные светильники всё делают сами.</p>
+            </div>
+
+            <div class="visual_card" style="height: 640px;">
+                <img src="images/prod_1.jpg" alt="Инструкция по установке фонарей" class="bg_img_one">
+                <div class="card_overlay left_align bottom_align" style="display: none;">
+                    <h3 class="card_title text_gold">УСТАНОВКА ЗА 30 СЕКУНД БЕЗ ИНСТРУМЕНТОВ</h3>
+                    <ul class="card_list numbered">
+                        <li>Включите главный переключатель на нижней стороне крышки фонаря.</li>
+                        <li>Прикрепите прочные пластиковые колышки друг к другу.</li>
+                        <li>Плотно вдавите колышек прямо в почву или траву.</li>
+                        <li>Предоставьте остальное солнцу и наслаждайтесь ночным свечением.</li>
+                    </ul>
+                    <div class="card_divider"></div>
+                    <p class="card_text bold_text text_gold">⚡ Быстрая и надежная бесплатная доставка до двери</p>
+                </div>
+            </div>
+
+            <div class="text_break">
+                <h3 class="text_break_title">Ключевые преимущества наших солнечных фонарей:</h3>
+                <ul class="text_break_list">
+                    <li><b>100% Работа от солнца:</b> Никаких проводов, нулевые счета за электричество и полная экологичность;</li>
+                    <li><b>Класс водонепроницаемости IP65:</b> Защищены от проливного дождя, снега, влаги и пыли;</li>
+                    <li><b>8 ярких теплых светодиодов:</b> Расположены по кругу для создания красивого и мягкого свечения;</li>
+                    <li><b>Безопасны для газонокосилки:</b> Низкопрофильный дизайн позволяет установить их практически вровень с травой;</li>
+                    <li><b>Сверхпрочная конструкция:</b> Верхнее кольцо из нержавеющей стали защищает от ржавчины и механических ударов;</li>
+                    <li><b>Полный комплект из 4 шт.:</b> Готовы к использованию прямо из коробки, колышки и инструкция в комплекте.</li>
+                </ul>
+            </div>
+
+            <div class="visual_card">
+                <img src="images/prod_2.jpg" alt="Прочные уличные дисковые светильники" class="bg_img">
+            </div>
+
+            <div class="text_break">
+                <p>Благодаря долговечным атмосферостойким материалам и надежной солнечной архитектуре, этот комплект станет вашим лучшим решением для ландшафтного дизайна, кардинально улучшая вечерний вид вашего дома и придавая ему премиальный статус.</p>
+            </div>
+
+        </section>
+
+        <section class="offer_section dark_bg">
+            <div class="content_layer">
+                <h2 class="main_title">Оформите заказ сейчас</h2>
+                <div class="separator_leaf light">☀️</div>
+
+                <div class="timer_wrap glass_timer">
+                    <p class="timer_title">До конца акции:</p>
+                    <div class="timer_container">
+                        <div class="timer_block">
+                            <div class="count hours">03</div>
+                            <div class="text">Часов</div>
+                        </div>
+                        <div class="separator">:</div>
+                        <div class="timer_block">
+                            <div class="count minutes">09</div>
+                            <div class="text">Минут</div>
+                        </div>
+                        <div class="separator">:</div>
+                        <div class="timer_block">
+                            <div class="count seconds">29</div>
+                            <div class="text">Секунд</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prices_container">
+                    <div class="price_card" data-package="1 Комплект (4 шт.) - Базовый">
+                        <div class="price_title">1 Комплект (4 шт.) - Базовый</div>
+                        <div class="price_flex">
+                            <div class="old_price">30 <span>AZN</span></div>
+                            <div class="new_price">19 <span>AZN</span></div>
+                        </div>
+                    </div>
+
+                    <div class="price_card highlight shadow_green" data-package="2 Комплекта (8 шт.) - Выгодный">
+                        <div class="hit_badge">Хит продаж</div>
+                        <div class="price_title">2 Комплекта (8 шт.) - Выгодный</div>
+                        <div class="price_flex">
+                            <div class="old_price">50 <span>AZN</span></div>
+                            <div class="new_price">29 <span>AZN</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="delivery-notice-container">
+                    <div class="delivery-card">
+                        <div class="delivery-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="truck-icon">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        
+                        <div class="delivery-text-box">
+                            <h3 class="delivery-title">Бесплатная доставка 0 AZN</h3>
+                            <p class="delivery-desc">Доставим ваш заказ прямо до двери совершенно бесплатно!</p>
+                        </div>
+
+                        <span class="delivery-badge">Акция</span>
+                    </div>
+                </div>
+
+                <div class="form_container">
+                    <h3 class="form_title">Заполните форму заказа</h3>
+                    
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    
+                    <form id="order_form" class="main_form" action="https://formsubmit.co/alisanbakir1@gmail.com" method="POST" target="hidden_iframe">
+                        <input type="hidden" name="_subject" value="🔥 Новый заказ: Садовые солнечные фонари (Комплект)">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <input type="hidden" id="selected_package" name="Тариф" value="2 Комплекта (8 шт.) - Выгодный">
+                        
+                        <div class="input_group">
+                            <label for="name">Ваше имя (необязательно)</label>
+                            <input type="text" id="name" name="name" placeholder="Введите ваше имя">
+                        </div>
+                        <div class="input_group">
+                            <label for="phone">Ваш телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+994 (__) ___-__-__" required
+                                pattern="[\+0-9\-\s\(\)]+" title="Допускаются только цифры, плюсы, минусы и скобки">
+                        </div>
+                        <button type="submit" class="button-primary submit_btn">Отправить заявку</button>
+                    </form>
+                    <p class="security_text">🔒 Ваши данные под надежной защитой</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer_section">
+            <div class="footer_content">
+                <p class="company_name">Eco Beauty Inc</p>
+                <p>ТЕЛ: +99477 602-23-22</p>
+                <a href="polit.html" target="_blank" class="policy_link">Политика конфиденциальности</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hiddenInput = document.getElementById('selected_package');
+            const allCards = document.querySelectorAll('.price_card');
+
+            allCards.forEach(card => {
+                card.style.cursor = 'pointer';
                 
-            </section>
-            <!-- /description -->
-            <!-- characteristics -->
-            <section>
-                <img src="assets/images/ima8.jpg" alt="EMS Massager">
-            </section>
-            <!-- /characteristics -->
-            
-            
-            <!-- reviews 3 -->
-            <h2 class="title title2" style="color: white;padding-top: 20px; background-color: #333;">Отзывы покупателей</h2>
-            <section style="background-color: #333;" class="reviews3_section">
-                <div class="owl-carousel owl-theme">
-<div class="review-item">
-    <div class="review_quote">1</div>
-    <div class="reviewer-name">Севда, 29 лет</div>
-    <hr>
-    <img class="review-photo" src="assets/images/revas1.avif" alt="Review 1">
-    <div class="review-text">Очень удобная вещь! Ношу с собой в сумочке, использую утром и вечером. Уже через неделю заметила, как зубы стали светлее. Никакой чувствительности — просто и эффективно!</div>
-</div>
-<div class="review-item">
-    <div class="review_quote">2</div>
-    <div class="reviewer-name">Тарлан, 34 года</div>
-    <hr>
-    <img class="review-photo" src="assets/images/revas2.webp" alt="Review 2">
-    <div class="review-text">Часто пью кофе, и зубы немного потемнели. Решил попробовать эту ручку — и не пожалел. Результат заметен уже после нескольких применений. Теперь улыбаюсь шире!</div>
-</div>
-<div class="review-item">
-    <div class="review_quote">3</div>
-    <div class="reviewer-name">Нигяр, 31 год</div>
-    <hr>
-    <img class="review-photo" src="assets/images/revas3.jpg" alt="Review 3">
-    <div class="review-text">Простая в использовании, приятный мятный вкус и никакой боли! Это лучший вариант, если вы хотите отбелить зубы дома без походов к стоматологу. Очень довольна результатом.</div>
-</div>
-<div class="review-item">
-    <div class="review_quote">4</div>
-    <div class="reviewer-name">Эльчин, 36 лет</div>
-    <hr>
-    <img class="review-photo" src="assets/images/revas4.jpg" alt="Review 4">
-    <div class="review-text">Не ожидал, что домашнее средство даст такой эффект. Зубы действительно стали белее, а сам процесс занимает меньше минуты. Удобно и без лишних затрат!</div>
-</div>
+                card.addEventListener('click', () => {
+                    const chosenValue = card.getAttribute('data-package');
+                    
+                    if (hiddenInput) {
+                        hiddenInput.value = chosenValue;
+                    }
 
-                    <!-- Add more reviews as needed -->
-                </div>
-            </section>
-            
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-            <script>
-                $(document).ready(function(){
-                    $('.owl-carousel').owlCarousel({
-                        items: 1,
-                        loop: true,
-                        margin: 10,
-                        nav: true,
-                        responsive: {
-                            0: {
-                                items: 1
-                            }
+                    // Переключаем класс .highlight на выбранном пакете во всех блоках страницы
+                    allCards.forEach(c => {
+                        if (c.getAttribute('data-package') === chosenValue) {
+                            c.classList.add('highlight');
+                        } else {
+                            c.classList.remove('highlight');
                         }
                     });
                 });
-            </script>
-
-            <!-- /reviews 3 -->
-
-
-            <!-- order steps -->
-            
-            <!-- /order steps -->
-            <!-- order 2 -->
-            <section class="offer_section offer2">
-                <div class="title_block">
-                    <h1 class="main_title" style="
-                                                      text-transform: uppercase;
-                                                      font-size: 24px;
-                                                      letter-spacing: 0px;    line-height: 30px; background-color: white; color: #333;
-                                                                "> ОТБЕЛИВАЮЩАЯ РУЧКА ДЛЯ ЗУБОВ</h1>
-                    <p class="subtitle">НАДЁЖНОЕ РЕШЕНИЕ ДЛЯ ЯРКОЙ УЛЫБКИ И БЕЗБОЛЕЗНЕННОГО ОТБЕЛИВАНИЯ!</p>
-                </div>
-                <img class="offer_image" src="assets/images/imag1.jpg">
-                <div class="price_block clearfix">
-                    <div class="price_item old">
-                        <div class="text">Обычная цена:</div>
-                        <div class="value">20 AZN</div>
-                    </div>
-                    <div class="discount_block">
-                        <div class="text">Скидка</div>
-                        <div class="value">-50%</div>
-                    </div>
-                    <div class="price_item new">
-                        <div class="text">Цена сегодня:</div>
-                        <div class="value">10 AZN</div>
-                    </div>
-                </div>
-                
-                <p style="
-                        text-align: center;
-                        background: #088395;
-                        color: white;
-                        padding: 10px;
-                        font-size: 17px;
-                        margin-bottom: 10px;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        ">ДОСТАВКА ВСЕГО 3 МАНАТА</p>
-                    <!-- Second Timer -->
-                    <div id="timer2" class="timer_block clearfix">
-                        <p>До конца акции осталось:</p>
-                        <div class="timer clearfix">
-                            <div class="timer_item">
-                                <div class="count hours"><span>0</span><span>0</span></div>
-                                <div class="text">часов</div>
-                            </div>
-                            <div class="timer_item">
-                                <div class="count minutes"><span>0</span><span>0</span></div>
-                                <div class="text">минут</div>
-                            </div>
-                            <div class="timer_item">
-                                <div class="count seconds"><span>0</span><span>0</span></div>
-                                <div class="text">секунд</div>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <script>
-                        function updateTimer(timerId) {
-                            const now = new Date();
-                            const midnight = new Date(now);
-                            midnight.setHours(24, 0, 0, 0); // Set to next midnight
-                
-                            const remainingTime = midnight - now;
-                            const hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24);
-                            const minutes = Math.floor((remainingTime / (1000 * 60)) % 60);
-                            const seconds = Math.floor((remainingTime / 1000) % 60);
-                
-                            document.querySelector(`#${timerId} .hours`).innerHTML = `<span>${Math.floor(hours / 10)}</span><span>${hours % 10}</span>`;
-                            document.querySelector(`#${timerId} .minutes`).innerHTML = `<span>${Math.floor(minutes / 10)}</span><span>${minutes % 10}</span>`;
-                            document.querySelector(`#${timerId} .seconds`).innerHTML = `<span>${Math.floor(seconds / 10)}</span><span>${seconds % 10}</span>`;
-                        }
-                
-                        // Initial call to set the timers
-                        updateTimer('timer1');
-                        updateTimer('timer2');
-                
-                        // Update the timers every second
-                        setInterval(() => updateTimer('timer1'), 1000);
-                        setInterval(() => updateTimer('timer2'), 1000);
-                    </script>
-
-<form id="order_form" class="order_form">
-    <input class="field" type="text" name="name" placeholder="Введите Ваше имя" >
-    <input class="field" type="tel" name="phone" placeholder="Введите Ваш телефон">
-    <button class="button" type="submit">Купить сейчас</button>
-</form>
-
-<script>
-    $(document).ready(function(){
-        $("a.button").click(function(event) {
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top
-            }, 500);
+            });
         });
-    });
     </script>
-    
+</body>
 
-<script type="text/javascript" src="assets/js/form-v.js"></script>
-
-                <div class="products_count">* осталось <b>11</b> штук по акции</div>
-            </section>
-            <!-- /order 2 -->
-            <!-- footer -->
-    <footer style="text-align: center;background: #e0e0e0;">
-            <div class="container text-center" style="
-        padding: 15px 0;
-    ">
-               <p style="text-align: center;"> Roobie Tech
-    </p>
-    <p style="text-align: center;">TEL: +994 55 883 65 60</p>
-    
-     <p style="text-align: center;"><a style="color: inherit;" href="polit.html" target="_blank">Политика конфиденциальности</a> </p> 
-            </div>
-        </footer>
-            <!-- /footer -->
-        </div>
-        <!-- scripts -->
-
-        <script src="assets/js/jqueryb47b0.js" type="javascript"></script>        
-        <script type="text/javascript" src="assets/js/jquery.cookiefe228.js" type="javascript"></script>
-        <!-- /scripts -->
-	    <script src="assets/js/form-v.js"></script>
-    
-   
-     
-    
-    </body>
 </html>
